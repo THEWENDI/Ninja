@@ -25,3 +25,25 @@ ninja1.sayname();
 ninja1.showStats();
 ninja1.drinksake();
 console.log(ninja1);
+
+//inheritance
+class Sensei extends Ninja{
+    constructor(name){
+        super(name)
+        this.health = 200
+        this.speed = 10
+        this.strength = 10
+        this.wisdom = 10
+
+    }
+
+    speakwisdom(){
+        super.drinksake();
+        console.log("To be or not to be?")
+    }
+
+}
+
+const Sensei1 = new Sensei("lao");
+Sensei1.speakwisdom();
+Sensei1.showStats();
